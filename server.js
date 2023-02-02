@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
     const form = formidable({ multiples: true });
     form.parse(req, (err, fields, files) => {
       if (err) {
-        return;
+        return res.end(JSON.stringify("something wroung"));
       }
       if (files.upload.originalFilename === "") {
         return res.end(JSON.stringify("There is no such file"));
