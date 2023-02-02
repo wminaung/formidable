@@ -1,0 +1,33 @@
+// if (req.url === "/fileupload") {
+  //   console.log("enter file upload");
+  //   const form = formidable({ multiples: true });
+
+  //   form.parse(req, function (err, fields, files) {
+  //     if (err) {
+  //       console.log(err, "***********************");
+  //       res.writeHead(err.httpCode || 400, { "Content-Type": "text/plain" });
+  //       res.end(String(err));
+  //       return;
+  //     } else {
+  //       if (Array.isArray(files.fileupload)) {
+  //         files.fileupload.forEach((file) => {
+  //           const { filepath: oldPath, originalFilename } = file;
+  //           const newPath = path.join(__dirname, "ok", originalFilename);
+  //           renameSync(oldPath, newPath);
+  //         });
+  //         res.write(JSON.stringify(files));
+  //         return res.end();
+  //       } else {
+  //         if (files.fileupload.originalFilename === "") {
+  //           return res.end("there is no such file");
+  //         }
+
+  //         const { filepath: oldPath, originalFilename } = files.fileupload;
+  //         const newPath = path.join(__dirname, "ok", originalFilename);
+  //         renameSync(oldPath, newPath);
+  //         res.write(JSON.stringify(files));
+  //         return res.end();
+  //       }
+  //     }
+  //   });
+  // } else {
